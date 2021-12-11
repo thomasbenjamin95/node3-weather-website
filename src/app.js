@@ -4,9 +4,7 @@ const hbs = require('hbs')
 const geocode = require('./utils.js/geocode')
 const forecast = require('./utils.js/forecast')
 
-
 const app = express()
-
 
 //Define Path for express config
 const publicDirectory = path.join(__dirname, '../public')
@@ -20,7 +18,6 @@ hbs.registerPartials(partialsPath)
 
 //setup static directory to serve
 app.use(express.static(publicDirectory))
-
 
 app.get('', (req, res) => {
     res.render('index',{
