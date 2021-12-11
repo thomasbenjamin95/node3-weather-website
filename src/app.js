@@ -6,7 +6,7 @@ const forecast = require('./utils.js/forecast')
 
 const app = express()
 
-const port = process.env.port || 3020
+const port = process.env.PORT || 3020
 
 
 //Define Path for express config
