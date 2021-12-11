@@ -4,5 +4,23 @@
     "hbs": "^4.2.0",
     "nodemon": "^2.0.15",
     "request": "^2.88.2"
-  }
+  },
+  "name": "webserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasbenjamin95/node3-weather-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasbenjamin95/node3-weather-website/issues"
+  },
+  "homepage": "https://github.com/thomasbenjamin95/node3-weather-website#readme",
+  "description": ""
 }
