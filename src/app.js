@@ -6,7 +6,7 @@ const forecast = require('./utils.js/forecast')
 
 const app = express()
 
-const port = process.env.PORT || 3020
+const port = process.env.PORT || 3071
 
 
 //Define Path for express config
@@ -49,28 +49,24 @@ app.get('/weather', (req,res) => {
         return res.send({
             error: 'You must provide an address'
         })
-    }
-    geocode(req.query.address,(error, {lattitude, longitude, location}) => {
-        if(error){
-            return res.send({error})
-        }
-        forecast(lattitude, longitude, (error, forecastData)=> {
-            if(error) {
+    }else{
+        geocode(req.query.address,(error, {longitude, lattitude, location}) => {
+            if(error){
                 return res.send({error})
-            }
-            res.send({
-                forecast: forecastData,
-                location,
-                address: req.query.address
-            })
-        })
+            }else{
+                forecast(longitude, lattitude, (error, forecastData)=> {
+                    if(error) {
+                        return res.send({error})
+                    }
+                        res.send({
+                            forecast: forecastData,
+                            location,
+                            address: req.query.address
+                    })
+                })
+            }       
     })
-
-    // res.send({
-    //     forecast:'It is snowing',
-    //     location: 'Philadelphia',
-    //     address: req.query.address
-    // })
+    }   
 })
 app.get('/products', (req,res)=> {
 
