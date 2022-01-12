@@ -41,6 +41,11 @@ header a {
     width: 250px;
 }
 
+img{
+    height: 250px;
+    width: 50px;
+}
+
 input{
     border: 1px solid #cccccc;
     padding: 8px;
