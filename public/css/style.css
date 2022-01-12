@@ -42,8 +42,8 @@ header a {
 }
 
 img{
-    height: 250px;
-    width: 150px;
+    height: 450px;
+    width: 310px;
 }
 
 input{
@@ -61,4 +61,18 @@ button{
 
 a{
     text-decoration: none;
+}
+#location-font{
+    font-size: 13px;
+}
+
+.button-style{
+    cursor: pointer;
+    border: 1px solid #888888;
+    background-color: #0288D1;
+    color: white;
+    padding: 8px;
+}
+#message-2{
+    color: #90A4AE;
 }
